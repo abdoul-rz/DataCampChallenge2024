@@ -1,0 +1,13 @@
+name: ramp-credit-card-fraud
+channels:
+  - defaults
+dependencies:
+  - joblib
+  - matplotlib
+  - numpy
+  - pandas
+  - kagglehub
+  - scikit-learn>=0.22
+  - pip
+  - pip:
+    - ramp-workflow

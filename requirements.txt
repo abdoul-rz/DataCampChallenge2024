@@ -2,4 +2,5 @@ ramp-workflow
 numpy
 pandas
 matplotlib
-scikit-learn>=1.4
+kagglehub
+scikit-learn>=0.22
