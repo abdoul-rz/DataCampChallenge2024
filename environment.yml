@@ -4,6 +4,7 @@ channels:
 dependencies:
   - joblib
   - matplotlib
+  - seaborn
   - numpy
   - pandas
   - kagglehub

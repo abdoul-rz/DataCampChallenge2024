@@ -1,6 +1,5 @@
 import os
 import hashlib
-import requests
 import pandas as pd
 import kagglehub
 import sklearn.model_selection as skms
@@ -8,8 +7,7 @@ import sklearn.model_selection as skms
 
 def get_dataset():
     """Download the dataset from Kaggle."""
-    path = kagglehub.dataset_download("mlg-ulb/creditcardfraud")
-    file_path = path + "/creditcard.csv"
+    file_path = "data/creditcard_2023.csv"
     return file_path
 
 
@@ -18,7 +16,7 @@ def get_train_test(file_path):
     dataset = pd.read_csv(file_path)
 
     # randomly sample 50% of the non-fraudulent transactions from
-    dataset = dataset.drop(dataset[dataset.Class == 0].sample(frac=0.5, random_state=42).index)
+    #dataset = dataset.drop(dataset[dataset.Class == 0].sample(frac=0.5, random_state=42).index)
 
     X, y = dataset.drop(columns=["Class"]), dataset["Class"]
 
