@@ -7,7 +7,8 @@ import sklearn.model_selection as skms
 
 def get_dataset():
     """Download the dataset from Kaggle."""
-    file_path = "data/creditcard_2023.csv"
+    path = kagglehub.dataset_download("nelgiriyewithana/credit-card-fraud-detection-dataset-2023")
+    file_path = path + "/creditcard_2023.csv"
     return file_path
 
 
