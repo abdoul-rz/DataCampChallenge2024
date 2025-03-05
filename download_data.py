@@ -1,6 +1,5 @@
 import os
 import hashlib
-import requests
 import pandas as pd
 import kagglehub
 import sklearn.model_selection as skms

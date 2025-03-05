@@ -8,7 +8,7 @@ _target_column_name = 'Class'
 _ignore_column_names = []
 _prediction_label_names = [0, 1]
 
-Predictions = rw.prediction_types.make_binary(
+Predictions = rw.prediction_types.make_multiclass(
     label_names=_prediction_label_names
 )
 
@@ -16,7 +16,6 @@ Predictions = rw.prediction_types.make_binary(
 workflow = rw.workflows.Estimator()
 
 # The roc_auc score is the default metric for the challenge
-# because the classes are imbalanced
 score_types = [
     rw.score_types.ROCAUC(name='roc_auc', precision=4),
 ]
